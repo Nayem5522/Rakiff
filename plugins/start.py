@@ -28,6 +28,18 @@ from database.database import *
 
 BAN_SUPPORT = f"{BAN_SUPPORT}"
 
+#async def is_subscribedp(bot, query, channel):
+#    btn = []
+#    for id in channel:
+#        chat = await bot.get_chat(int(id))
+#        try:
+#            await bot.get_chat_member(id, query.from_user.id)
+#        except UserNotParticipant:
+#            btn.append([InlineKeyboardButton(f"✇ Join {chat.title} ✇", url=chat.invite_link)]) #✇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ✇
+#        except Exception as e:
+#            pass
+#    return btn
+
 async def is_subscribedp(bot, query, channel):
     btn = []
     for id in channel:
@@ -35,10 +47,22 @@ async def is_subscribedp(bot, query, channel):
         try:
             await bot.get_chat_member(id, query.from_user.id)
         except UserNotParticipant:
-            btn.append([InlineKeyboardButton(f"✇ Join {chat.title} ✇", url=chat.invite_link)]) #✇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ✇
+            # চেক করা হচ্ছে চ্যানেল প্রাইভেট না পাবলিক
+            if chat.username:  # পাবলিক চ্যানেল
+                join_url = f"https://t.me/{chat.username}"
+                btn.append([InlineKeyboardButton(f"✇ Join {chat.title} ✇", url=join_url)])
+            else:  # প্রাইভেট চ্যানেল
+                try:
+                    invite_link = chat.invite_link
+                    if not invite_link:
+                        invite_link = await bot.export_chat_invite_link(id)
+                    btn.append([InlineKeyboardButton(f"✇ Request to Join {chat.title} ✇", url=invite_link)])
+                except Exception as e:
+                    print(f"Couldn't get invite link: {e}")
         except Exception as e:
-            pass
+            print(f"Error checking member: {e}")
     return btn
+    
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def start_command(client: Client, message: Message):
@@ -174,7 +198,7 @@ async def start_command(client: Client, message: Message):
 ) if file_size else ""
             # Use file_name if exists, else use original caption
             original_caption = file_name if file_name else (msg.caption.html if msg.caption else "")
-            caption = f"<b>🗃️ ꜰɪʟᴇ ɴᴀᴍᴇ : </b> @PrimeCineHub <a href='https://t.me/PrimeCineZone'>{original_caption}</a>\n\n{formatted_size}\n\n{CUSTOM_CAPTION}" if CUSTOM_CAPTION else original_caption
+            caption = f"<b>🗃️ ꜰɪʟᴇ ɴᴀᴍᴇ : </b> @PrimeCineHub <a href='https://t.me/PrimeCineZone'>{original_caption}</a>\n\n{formatted_size}{CUSTOM_CAPTION}" if CUSTOM_CAPTION else original_caption
 
             # Custom Buttons
             custom_buttons = InlineKeyboardMarkup([
@@ -212,7 +236,16 @@ async def start_command(client: Client, message: Message):
 
         if FILE_AUTO_DELETE > 0:
             notification_msg = await message.reply(
-                f"<b>Tʜɪs Fɪʟᴇ ᴡɪʟʟ ʙᴇ Dᴇʟᴇᴛᴇᴅ ɪɴ  {get_exp_time(FILE_AUTO_DELETE)}. Pʟᴇᴀsᴇ sᴀᴠᴇ ᴏʀ ғᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ʙᴇғᴏʀᴇ ɪᴛ ɢᴇᴛs Dᴇʟᴇᴛᴇᴅ.</b>"
+                f"""<b>⚠️ 𝐍𝐨𝐭𝐢𝐜𝐞 | বিজ্ঞপ্তি ⚠️
+
+🕒 Tʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ 10 ᴍɪɴᴜᴛᴇs.  
+🕒 এই ফাইলটি ১০ মিনিটের মধ্যে স্বয়ংক্রিয়ভাবে মুছে যাবে।
+
+📤 Pʟᴇᴀsᴇ sᴀᴠᴇ ᴏʀ sʜᴀʀᴇ ɪᴛ sᴏᴍᴇᴡʜᴇʀᴇ ᴇʟsᴇ ʙᴇғᴏʀᴇ ɪᴛ ɢᴇᴛs ᴅᴇʟᴇᴛᴇᴅ.  
+📤 মুছে যাওয়ার আগে অনুগ্রহ করে এটি অন্য কোথাও শেয়ার করে রাখুন।
+
+✅ Tʜᴀɴᴋ Yᴏᴜ ғᴏʀ / ধন্যবাদ  
+– <i>@PrimeCineZone & @Prime_Botz</i></b>"""
             )
 
             await asyncio.sleep(FILE_AUTO_DELETE)
