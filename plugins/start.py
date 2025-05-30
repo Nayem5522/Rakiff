@@ -28,18 +28,6 @@ from database.database import *
 
 BAN_SUPPORT = f"{BAN_SUPPORT}"
 
-#async def is_subscribedp(bot, query, channel):
-#    btn = []
-#    for id in channel:
-#        chat = await bot.get_chat(int(id))
-#        try:
-#            await bot.get_chat_member(id, query.from_user.id)
-#        except UserNotParticipant:
-#            btn.append([InlineKeyboardButton(f"✇ Join {chat.title} ✇", url=chat.invite_link)]) #✇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ✇
-#        except Exception as e:
-#            pass
-#    return btn
-
 async def is_subscribedp(bot, query, channel):
     btn = []
     for id in channel:
@@ -47,20 +35,9 @@ async def is_subscribedp(bot, query, channel):
         try:
             await bot.get_chat_member(id, query.from_user.id)
         except UserNotParticipant:
-            # চেক করা হচ্ছে চ্যানেল প্রাইভেট না পাবলিক
-            if chat.username:  # পাবলিক চ্যানেল
-                join_url = f"https://t.me/{chat.username}"
-                btn.append([InlineKeyboardButton(f"✇ Join {chat.title} ✇", url=join_url)])
-            else:  # প্রাইভেট চ্যানেল
-                try:
-                    invite_link = chat.invite_link
-                    if not invite_link:
-                        invite_link = await bot.export_chat_invite_link(id)
-                    btn.append([InlineKeyboardButton(f"✇ Request to Join {chat.title} ✇", url=invite_link)])
-                except Exception as e:
-                    print(f"Couldn't get invite link: {e}")
+            btn.append([InlineKeyboardButton(f"✇ Join {chat.title} ✇", url=chat.invite_link)]) #✇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ✇
         except Exception as e:
-            print(f"Error checking member: {e}")
+            pass
     return btn
     
 
@@ -244,7 +221,7 @@ async def start_command(client: Client, message: Message):
 📤 Pʟᴇᴀsᴇ sᴀᴠᴇ ᴏʀ sʜᴀʀᴇ ᴏʀ ғᴏʀᴡᴀʀᴅ ɪᴛ sᴏᴍᴇᴡʜᴇʀᴇ ᴇʟsᴇ ʙᴇғᴏʀᴇ ɪᴛ ɢᴇᴛs ᴅᴇʟᴇᴛᴇᴅ.  
 📤 মুছে যাওয়ার আগে অনুগ্রহ করে এটি অন্য কোথাও শেয়ার বা ফরোয়ার্ড করে রাখুন।
 
-✅ Tʜᴀɴᴋ Yᴏᴜ ғᴏʀ / ধন্যবাদ  
+✅ Tʜᴀɴᴋ Yᴏᴜ / ধন্যবাদ  
 – <i>@PrimeCineZone & @Prime_Botz</i></b>"""
             )
 
