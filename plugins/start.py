@@ -68,8 +68,26 @@ async def start_command(client: Client, message: Message):
     if not await db.present_user(user_id):
         try:
             await db.add_user(user_id)
-        except:
-            pass
+
+            user_name = message.from_user.first_name
+            user_mention = message.from_user.mention
+            user_id_str = str(user_id)
+
+            text = (
+                "<b>🔰 #New_Bot_User</b>\n\n"
+                f"<b>👤 Name:</b> <code>{user_name}</code>\n"
+                f"<b>🆔 ID:</b> <code>{user_id_str}</code>\n"
+                f"<b>🔗 Mention:</b> {user_mention}\n"
+                f"<b>🕒 Time:</b> <code>{message.date.strftime('%I:%M %p')}</code>"
+            )
+
+            await client.send_message(
+                chat_id=LOG_CHANNEL_ID,
+                text=text,
+                disable_web_page_preview=True
+            )
+        except Exception as e:
+            print(f"Error sending new user log: {e}")
 
     # Handle normal message flow
     text = message.text
@@ -183,7 +201,7 @@ async def start_command(client: Client, message: Message):
         InlineKeyboardButton("🍿 ᴘʀɪᴍᴇ ᴄɪɴᴇᴢᴏɴᴇ", url="https://t.me/PrimeCineZone"),
         InlineKeyboardButton("〄 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ", url="https://t.me/Prime_Botz")
     ],
-    [InlineKeyboardButton("🔍 ᴘʀɪᴍᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🎬", url="https://t.me/PrimeCineZone/143")]
+    [InlineKeyboardButton("🔍 ᴘʀɪᴍᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🗃️", url="https://t.me/PrimeCineZone/143")]
 ])
 
             try:
@@ -222,7 +240,7 @@ async def start_command(client: Client, message: Message):
 📤 মুছে যাওয়ার আগে অনুগ্রহ করে এটি অন্য কোথাও শেয়ার বা ফরোয়ার্ড করে রাখুন।
 
 ✅ Tʜᴀɴᴋ Yᴏᴜ / ধন্যবাদ  
-⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ:– <i>@PrimeCineZone & @Prime_Botz</i></b>"""
+⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ: <i>@PrimeCineZone & @Prime_Botz</i></b>"""
             )
 
             await asyncio.sleep(FILE_AUTO_DELETE)
