@@ -73,12 +73,15 @@ async def start_command(client: Client, message: Message):
             user_mention = message.from_user.mention
             user_id_str = str(user_id)
 
+            bd_time = message.date + timedelta(hours=6)
+            time_str = bd_time.strftime('%d %B, %Y - %I:%M %p')
+
             text = (
-                "<b>🔰 #New_Bot_User</b>\n\n"
-                f"<b>👤 Name:</b> <code>{user_name}</code>\n"
-                f"<b>🆔 ID:</b> <code>{user_id_str}</code>\n"
-                f"<b>🔗 Mention:</b> {user_mention}\n"
-                f"<b>🕒 Time:</b> <code>{message.date.strftime('%I:%M %p')}</code>"
+                "🔰 <b>New User Joined!</b>\n\n"
+                f"👤 <b>Name:</b> <code>{user_name}</code>\n"
+                f"🆔 <b>User ID:</b> <code>{user_id_str}</code>\n"
+                f"🔗 <b>Mention:</b> {user_mention}\n"
+                f"🕒 <b>Joined At:</b> <code>{time_str}</code>"
             )
 
             await client.send_message(
