@@ -106,7 +106,7 @@ async def start_command(client: Client, message: Message):
                         btn.append([InlineKeyboardButton("♻️ ʀᴇғʀᴇsʜ ♻️", url=f"https://t.me/{username}?start=true")])
 
                     await message.reply_photo(
-                        photo="https://i.postimg.cc/7Zpf9s1C/IMG-20250514-223544-954.jpg",  # Replace with your image link
+                        photo="https://i.postimg.cc/xdkd1h4m/IMG-20250715-153124-952.jpg",  # Replace with your image link
                         caption = (
                             f"<b>👋 Hello {message.from_user.mention},\n\n"
                             "<b>🗃️ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ꜰɪʟᴇ ʏᴏᴜ ʀᴇǫᴜᴇsᴛᴇᴅ, ʏᴏᴜ ᴍᴜsᴛ ᴊᴏɪɴ ᴏᴜʀ ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟs! 📢</b>\n\n"
@@ -202,7 +202,7 @@ async def start_command(client: Client, message: Message):
             custom_buttons = InlineKeyboardMarkup([
     [
         InlineKeyboardButton("🍿 ᴘʀɪᴍᴇ ᴄɪɴᴇᴢᴏɴᴇ", url="https://t.me/PrimeCineZone"),
-        InlineKeyboardButton("〄 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ", url="https://t.me/Prime_Botz")
+        InlineKeyboardButton("〄 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ", url="https://t.me/PrimeXBots")
     ],
     [InlineKeyboardButton("🔍 ᴘʀɪᴍᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🗃️", url="https://t.me/PrimeCineZone/143")]
 ])
@@ -243,7 +243,7 @@ async def start_command(client: Client, message: Message):
 📤 মুছে যাওয়ার আগে অনুগ্রহ করে এটি অন্য কোথাও শেয়ার বা ফরোয়ার্ড করে রাখুন।
 
 ✅ Tʜᴀɴᴋ Yᴏᴜ / ধন্যবাদ  
-⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ: <i>@PrimeCineZone & @Prime_Botz</i></b>"""
+⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ: <i>@PrimeCineZone & @PrimeXBots</i></b>"""
             )
 
             await asyncio.sleep(FILE_AUTO_DELETE)
@@ -275,10 +275,10 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup([
     [
         InlineKeyboardButton("🔎 ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ 🎞️", url="https://t.me/+OG3sftDEbZ9kMzFl"),
-        InlineKeyboardButton("〄 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 〄", url="https://t.me/Prime_Botz")
+        InlineKeyboardButton("〄 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 〄", url="https://t.me/PrimeXBots")
     ],
     [
-        InlineKeyboardButton("🍿 ᴘʀɪᴍᴇ ᴄɪɴᴇᴢᴏɴᴇ 🗃️", url="https://t.me/PrimeCineHub")
+        InlineKeyboardButton("🍿 ᴘʀɪᴍᴇ ᴄɪɴᴇᴢᴏɴᴇ 🗃️", url="https://t.me/PRIMECINEZONE")
     ],
     [
         InlineKeyboardButton("〆 ʜᴇʟᴘ 〆", callback_data='help'),
