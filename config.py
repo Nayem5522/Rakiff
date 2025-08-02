@@ -28,15 +28,15 @@ AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('
 # give channel id with separate space. Ex: ('-10073828 -102782829 -1007282828')
 
 FSUB_LINK_EXPIRY = int(os.getenv("FSUB_LINK_EXPIRY", "0"))  # 0 means no expiry
-BAN_SUPPORT = os.environ.get("BAN_SUPPORT", "https://t.me/prime_Support_Group")
+BAN_SUPPORT = os.environ.get("BAN_SUPPORT", "https://t.me/Prime_Support_Group")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "200"))
 #--------------------------------------------
-START_PIC = os.environ.get("START_PIC", "https://i.postimg.cc/yxRd4wPj/Chat-GPT-Image-May-27-2025-07-26-46-AM.png")
+START_PIC = os.environ.get("START_PIC", "https://i.postimg.cc/bvPFwJWT/IMG-20250802-090356-178.jpg")
 FORCE_PIC = os.environ.get("FORCE_PIC", "https://telegra.ph/file/e292b12890b8b4b9dcbd1.jpg")
 #--------------------------------------------
 
 #--------------------------------------------
-HELP_TXT = "<b><blockquote>ᴛʜɪs ɪs ᴀɴ ғɪʟᴇ ᴛᴏ ʟɪɴᴋ ʙᴏᴛ ᴡᴏʀᴋ ғᴏʀ @Prime_Botz\n\n❏ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs\n├/start : sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ\n├/about : ᴏᴜʀ Iɴғᴏʀᴍᴀᴛɪᴏɴ\n└/help : ʜᴇʟᴘ ʀᴇʟᴀᴛᴇᴅ ʙᴏᴛ\n\n sɪᴍᴘʟʏ ᴄʟɪᴄᴋ ᴏɴ ʟɪɴᴋ ᴀɴᴅ sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ ᴊᴏɪɴ ʙᴏᴛʜ ᴄʜᴀɴɴᴇʟs ᴀɴᴅ ʀᴇғʀᴇsʜ ᴛʜᴀᴛs ɪᴛ....🍿.!\n\n ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ <a href='https://t.me/Prime_Nayem'>ᴍʀ.ᴘʀɪᴍᴇ</a></blockquote></b>"
+HELP_TXT = "<b><blockquote>ᴛʜɪs ɪs ᴀɴ ғɪʟᴇ ᴛᴏ ʟɪɴᴋ ʙᴏᴛ ᴡᴏʀᴋ ғᴏʀ @PrimeXBots\n\n❏ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs\n├/start : sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ\n├/about : ᴏᴜʀ Iɴғᴏʀᴍᴀᴛɪᴏɴ\n└/help : ʜᴇʟᴘ ʀᴇʟᴀᴛᴇᴅ ʙᴏᴛ\n\n sɪᴍᴘʟʏ ᴄʟɪᴄᴋ ᴏɴ ʟɪɴᴋ ᴀɴᴅ sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ ᴊᴏɪɴ ʙᴏᴛʜ ᴄʜᴀɴɴᴇʟs ᴀɴᴅ ʀᴇғʀᴇsʜ ᴛʜᴀᴛs ɪᴛ....🍿.!\n\n ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ <a href='https://t.me/Prime_Nayem'>ᴍʀ.ᴘʀɪᴍᴇ</a></blockquote></b>"
 ABOUT_TXT = """<b><blockquote>╭────[ ᴍʏ ᴅᴇᴛᴀɪʟs ]────⍟
 ├⍟ ᴍʏ ɴᴀᴍᴇ : <a href='https://t.me/PrimeStoreXBot'>Pʀɪᴍᴇ SᴛᴏʀᴇXʙᴏᴛ</a>
 ├⍟ ᴏᴡɴᴇʀ : <a href='https://t.me/Prime_Nayem'>ᴍʀ.ᴘʀɪᴍᴇ</a> 
@@ -73,7 +73,7 @@ CMD_TXT = """<blockquote><b>» ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs:</b></blockqu
 """
 #--------------------------------------------
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", 
-    """@PrimeCineZone <blockquote>
+    """<blockquote>
 ╭─━━━━⌁ ᴇɴɢᴀɢᴇ ᴡɪᴛʜ ᴘᴏꜱᴛ ⌁━━━━━─╮
 ├⚜️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ <a href='https://t.me/addlist/ceobDOjc7202ZmVl'>ᴩʀɪᴍᴇXʙᴏᴛs</a>
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━╯
