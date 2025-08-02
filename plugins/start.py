@@ -196,7 +196,7 @@ async def start_command(client: Client, message: Message):
 ) if file_size else ""
             # Use file_name if exists, else use original caption
             original_caption = file_name if file_name else (msg.caption.html if msg.caption else "")
-            caption = f"<b>🗃️ ꜰɪʟᴇ ɴᴀᴍᴇ : </b> @PrimeCineHub <a href='https://t.me/PrimeCineZone'>{original_caption}</a>\n\n{formatted_size}{CUSTOM_CAPTION}" if CUSTOM_CAPTION else original_caption
+            caption = f"<b>🗃️ ꜰɪʟᴇ ɴᴀᴍᴇ : </b> @PrimeCineHuB <a href='https://t.me/PrimeCineZone'>{original_caption}</a>\n\n{formatted_size}{CUSTOM_CAPTION}" if CUSTOM_CAPTION else original_caption
 
             # Custom Buttons
             custom_buttons = InlineKeyboardMarkup([
@@ -204,7 +204,7 @@ async def start_command(client: Client, message: Message):
         InlineKeyboardButton("🍿 ᴘʀɪᴍᴇ ᴄɪɴᴇᴢᴏɴᴇ", url="https://t.me/PrimeCineZone"),
         InlineKeyboardButton("〄 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ", url="https://t.me/PrimeXBots")
     ],
-    [InlineKeyboardButton("🔍 ᴘʀɪᴍᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🗃️", url="https://t.me/PrimeCineZone/143")]
+    [InlineKeyboardButton("🔍 ᴘʀɪᴍᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🗃️", url="https://t.me/PrimeCineZone/31")]
 ])
 
             try:
