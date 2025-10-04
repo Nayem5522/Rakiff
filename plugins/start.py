@@ -77,7 +77,7 @@ async def start_command(client: Client, message: Message):
             time_str = bd_time.strftime('%d %B, %Y - %I:%M %p')
 
             text = (
-                "🔰 <b>New User Joined!</b>\n\n"
+                "🔰 <b>New User Joined! @Rakibul51624bot</b>\n\n"
                 f"👤 <b>Name:</b> <code>{user_name}</code>\n"
                 f"🆔 <b>User ID:</b> <code>{user_id_str}</code>\n"
                 f"🔗 <b>Mention:</b> {user_mention}\n"
@@ -196,15 +196,16 @@ async def start_command(client: Client, message: Message):
 ) if file_size else ""
             # Use file_name if exists, else use original caption
             original_caption = file_name if file_name else (msg.caption.html if msg.caption else "")
-            caption = f"<b>🗃️ ꜰɪʟᴇ ɴᴀᴍᴇ : </b> @PrimeCineHuB <a href='https://t.me/PrimeCineZone'>{original_caption}</a>\n\n{formatted_size}{CUSTOM_CAPTION}" if CUSTOM_CAPTION else original_caption
-
+            #caption = f"<b>🗃️ ꜰɪʟᴇ ɴᴀᴍᴇ : </b> @PrimeCineHuB <a href='https://t.me/PrimeCineZone'>{original_caption}</a>\n\n{formatted_size}{CUSTOM_CAPTION}" if CUSTOM_CAPTION else original_caption
+            caption = f"<b>🗃️ ꜰɪʟᴇ ɴᴀᴍᴇ : </b>{original_caption}\n\n{formatted_size}{CUSTOM_CAPTION}" if CUSTOM_CAPTION else original_caption
+            
             # Custom Buttons
             custom_buttons = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("🍿 ᴘʀɪᴍᴇ ᴄɪɴᴇᴢᴏɴᴇ", url="https://t.me/PrimeCineZone"),
-        InlineKeyboardButton("〄 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ", url="https://t.me/PrimeXBots")
+        InlineKeyboardButton("🍿 Channel", url="https://t.me/Rakibul5162"),
+        InlineKeyboardButton("〄 Group", url="https://t.me/+qqlFvtYDJOw4MmI1")
     ],
-    [InlineKeyboardButton("🔍 ᴘʀɪᴍᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🗃️", url="https://t.me/PrimeCineZone/31")]
+    [InlineKeyboardButton("Creator", url="https://t.me/prime_Nayem")]
 ])
 
             try:
@@ -242,8 +243,7 @@ async def start_command(client: Client, message: Message):
 📤 Pʟᴇᴀsᴇ sᴀᴠᴇ ᴏʀ sʜᴀʀᴇ ᴏʀ ғᴏʀᴡᴀʀᴅ ɪᴛ sᴏᴍᴇᴡʜᴇʀᴇ ᴇʟsᴇ ʙᴇғᴏʀᴇ ɪᴛ ɢᴇᴛs ᴅᴇʟᴇᴛᴇᴅ.  
 📤 মুছে যাওয়ার আগে অনুগ্রহ করে এটি অন্য কোথাও শেয়ার বা ফরোয়ার্ড করে রাখুন।
 
-✅ Tʜᴀɴᴋ Yᴏᴜ / ধন্যবাদ  
-⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ: <i>@PrimeCineZone & @PrimeXBots</i></b>"""
+✅ Tʜᴀɴᴋ Yᴏᴜ / ধন্যবাদ</b>"""
             )
 
             await asyncio.sleep(FILE_AUTO_DELETE)
@@ -274,11 +274,8 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("🔎 ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ 🎞️", url="https://t.me/+OG3sftDEbZ9kMzFl"),
-        InlineKeyboardButton("〄 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 〄", url="https://t.me/PrimeXBots")
-    ],
-    [
-        InlineKeyboardButton("🍿 ᴘʀɪᴍᴇ ᴄɪɴᴇᴢᴏɴᴇ 🗃️", url="https://t.me/PRIMECINEZONE")
+        InlineKeyboardButton("🔎 ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ 🎞️", url="https://t.me/+qqlFvtYDJOw4MmI1"),
+        InlineKeyboardButton("〄 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 〄", url="https://t.me/Rakibul5162")
     ],
     [
         InlineKeyboardButton("〆 ʜᴇʟᴘ 〆", callback_data='help'),
