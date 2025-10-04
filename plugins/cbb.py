@@ -43,11 +43,8 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
                 [
-                    InlineKeyboardButton("🔎 ʀᴇQᴜᴇsᴛ ɢʀᴏᴜᴘ 🎞️", url="https://t.me/+OG3sftDEbZ9kMzFl"),
-                    InlineKeyboardButton("〄 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 〄", url="https://t.me/PrimeXBots")
-                ],
-                [
-                    InlineKeyboardButton("🍿 ᴘʀɪᴍᴇ ᴄɪɴᴇᴢᴏɴᴇ 🗃️", url="https://t.me/PRIMECINEZONE")
+                    InlineKeyboardButton("🔎 ʀᴇQᴜᴇsᴛ ɢʀᴏᴜᴘ 🎞️", url="https://t.me/+qqlFvtYDJOw4MmI1"),
+                    InlineKeyboardButton("〄 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 〄", url="https://t.me/Rakibul5162")
                 ],
                 [
                     InlineKeyboardButton("〆 ʜᴇʟᴘ 〆", callback_data='help'),
