@@ -17,7 +17,7 @@ CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002525477015")) #Your db channe
 LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID", "-1002196408894"))
 
 OWNER = os.environ.get("OWNER", "Rakibul51624") # Owner username without @
-OWNER_ID = int(os.environ.get("OWNER_ID", "7945670631")) # Owner id
+OWNER_ID = int(os.environ.get("OWNER_ID", "7057105056")) # Owner id
 #--------------------------------------------
 PORT = os.environ.get("PORT", "8001")
 #--------------------------------------------
@@ -36,7 +36,7 @@ FORCE_PIC = os.environ.get("FORCE_PIC", "https://telegra.ph/file/e292b12890b8b4b
 #--------------------------------------------
 
 #--------------------------------------------
-HELP_TXT = "<b><blockquote>ᴛʜɪs ɪs ᴀɴ ғɪʟᴇ ᴛᴏ ʟɪɴᴋ ʙᴏᴛ ᴡᴏʀᴋ ғᴏʀ @PrimeXBots\n\n❏ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs\n├/start : sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ\n├/about : ᴏᴜʀ Iɴғᴏʀᴍᴀᴛɪᴏɴ\n└/help : ʜᴇʟᴘ ʀᴇʟᴀᴛᴇᴅ ʙᴏᴛ\n\n sɪᴍᴘʟʏ ᴄʟɪᴄᴋ ᴏɴ ʟɪɴᴋ ᴀɴᴅ sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ ᴊᴏɪɴ ʙᴏᴛʜ ᴄʜᴀɴɴᴇʟs ᴀɴᴅ ʀᴇғʀᴇsʜ ᴛʜᴀᴛs ɪᴛ....🍿.!\n\n ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ <a href='https://t.me/Prime_Nayem'>ᴍʀ.ᴘʀɪᴍᴇ</a></blockquote></b>"
+HELP_TXT = "<b><blockquote>ᴛʜɪs ɪs ᴀɴ ғɪʟᴇ ᴛᴏ ʟɪɴᴋ ʙᴏᴛ ᴡᴏʀᴋ ғᴏʀ @Rakibul51624\n\n❏ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs\n├/start : sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ\n├/about : ᴏᴜʀ Iɴғᴏʀᴍᴀᴛɪᴏɴ\n└/help : ʜᴇʟᴘ ʀᴇʟᴀᴛᴇᴅ ʙᴏᴛ\n\n sɪᴍᴘʟʏ ᴄʟɪᴄᴋ ᴏɴ ʟɪɴᴋ ᴀɴᴅ sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ ᴊᴏɪɴ ʙᴏᴛʜ ᴄʜᴀɴɴᴇʟs ᴀɴᴅ ʀᴇғʀᴇsʜ ᴛʜᴀᴛs ɪᴛ....🍿.!\n\n ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ <a href='https://t.me/Prime_Nayem'>ᴍʀ.ᴘʀɪᴍᴇ</a></blockquote></b>"
 ABOUT_TXT = """<b><blockquote>╭────[ ᴍʏ ᴅᴇᴛᴀɪʟs ]────⍟
 ├⍟ ᴍʏ ɴᴀᴍᴇ : <a href='https://t.me/PrimeStoreXBot'>Pʀɪᴍᴇ SᴛᴏʀᴇXʙᴏᴛ</a>
 ├⍟ ᴏᴡɴᴇʀ : <a href='https://t.me/Rakibul51624'>Rakibul</a> 
