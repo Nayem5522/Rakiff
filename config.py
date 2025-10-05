@@ -22,7 +22,7 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "7945670631")) # Owner id
 PORT = os.environ.get("PORT", "8001")
 #--------------------------------------------
 DB_URI = os.environ.get("DATABASE_URL", "")
-DB_NAME = os.environ.get("DATABASE_NAME", "PrimeBotz")
+DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 #--------------------------------------------
 AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '').split()] 
 # give channel id with separate space. Ex: ('-10073828 -102782829 -1007282828')
